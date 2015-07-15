@@ -12,8 +12,8 @@ module AmazonReview
 
     begin
       url = "http://www.amazon.co.jp/product-reviews/#{asin}/?ie=UTF8&showViewpoints=0&pageNumber=#{page}&sortBy=bySubmissionDateAscending"
-      doc = Nokogiri::HTML(open(url))
-      
+      html = open(url, "r:CP932").read.encode("UTF-8")
+      doc = Nokogiri::HTML.parse(html)
       # parse each review
       new_reviews = 0
       doc.css("#productReviews td > a[name]").each do |review_html|
