@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'amazon-review'
-  s.version     = '0.0.1'
+  s.version     = '0.0.1.1'
   s.date        = '2014-09-09'
   s.summary     = "A simple gem to parse Amazon product reviews"
   s.description = "A simple gem to parse Amazon product reviews"
