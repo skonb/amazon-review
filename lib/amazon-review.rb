@@ -11,7 +11,7 @@ module AmazonReview
     # iterate through the pages of reviews
 
     begin
-      url = "http://www.amazon.com/product-reviews/#{asin}/?ie=UTF8&showViewpoints=0&pageNumber=#{page}&sortBy=bySubmissionDateAscending"
+      url = "http://www.amazon.co.jp/product-reviews/#{asin}/?ie=UTF8&showViewpoints=0&pageNumber=#{page}&sortBy=bySubmissionDateAscending"
       doc = Nokogiri::HTML(open(url))
       
       # parse each review

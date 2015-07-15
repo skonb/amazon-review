@@ -15,7 +15,7 @@ module AmazonReview
     end
     
     def url   
-      @url ||= "http://www.amazon.com/review/#{id}"
+      @url ||= "http://www.amazon.co.jp/review/#{id}"
     end
     
     def user_id
