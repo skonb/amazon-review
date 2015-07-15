@@ -22,6 +22,7 @@ module AmazonReview
       end       
       # go to next page
       page += 1
+      break
       
       # delay to prevent 503 errors
       delay = [0, delay - 0.1].max # decrease delay
