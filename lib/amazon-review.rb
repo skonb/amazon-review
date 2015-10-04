@@ -9,7 +9,7 @@ module AmazonReview
     delay = 0.5
     page = 1
     url = "http://www.amazon.co.jp/product-reviews/#{asin}/?ie=UTF8&showViewpoints=0&pageNumber=#{page}&sortBy=bySubmissionDateAscending"
-    html = open(url, "r:CP932").read.encode("UTF-8")
+    html = open(url, "r:utf-8").read.encode("UTF-8")
     doc = Nokogiri::HTML.parse(html)
     # parse each review
     new_reviews = 0
